@@ -64,7 +64,7 @@ public class AccountDAO {
             if (rs.next() && username != "") {
                 return new Account(rs.getInt("account_id"), rs.getString("username"), rs.getString("password"));
             }
-        } catch (SQLException e) {
+        }catch (SQLException e) {
             System.out.println("Cannot Find Account: " + e.getMessage());
         }
         return null;
